@@ -1,0 +1,27 @@
+@import '../scss/variables.scss';
+
+body {
+  margin: 0;
+  background-color: $white;
+  background-image: url('../images/main-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: 0 0, center;
+  background-size: 100% 901px;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+p, a, li, button {
+  font-family: 'Poppins', sans-serif;
+}
+
+p, ul {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}

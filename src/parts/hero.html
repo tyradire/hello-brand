@@ -1,0 +1,39 @@
+<section class="hero">
+  <p class="hero__opening">OPEN EVERYDAY 6AM - 9PM</p>
+  <p class="hero__subtitle">A bad day with lunch is better than a good day without it.</p>
+  <div class="hero__buttons">
+    <button id="reserve-btn">Reserve a table</button>
+    <ul>
+      <li class="hero__social-link"><a href="#">Fb</a></li>
+      <li class="hero__social-link"><a href="#">Ig</a></li>
+      <li class="hero__social-link"><a href="#">Tw</a></li>
+      <li class="hero__social-link"><a href="#">Yt</a></li>
+    </ul>
+  </div>
+  <div class="popup" id="popup">
+    <form class="popup__form" action="#" id="reserve-form">
+      <div class="popup__fields">
+        <input class="popup__field" type="text" id="name" name="name" placeholder="Ваше имя" required="true" />
+        <input class="popup__field" type="tel" id="phone" name="phone" placeholder="Ваш телефон" required="true" />
+        <input 
+          class="popup__time" 
+          type="time" 
+          value="13:30"
+          min="06:00" 
+          max="21:00"
+          id="time"
+          name="time"
+          />
+      </div>
+      <img class="popup__logo" src="../images/header-logo.svg" alt="popup logo" />
+      <input 
+        class="popup__submit" 
+        type="submit" 
+        name="submit"
+        id="form-submit" 
+        value="Reserve"
+        >
+        <button type="reset" class="popup__close" id="reserve-close-btn">x</button>
+    </form>
+  </div>
+</section>

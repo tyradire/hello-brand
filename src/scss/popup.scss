@@ -1,0 +1,94 @@
+@import '../scss/variables.scss';
+
+.popup {
+  position: fixed;
+  display: none;
+  top: 20%;
+  left: calc(50% - 130px);
+  z-index: 10;
+  &__form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 260px;
+    height: 360px;
+    background-color: $darkblue;
+  }
+  &__logo {
+    width: 220px;
+    height: 44px;
+  }
+  &__fields {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    input {
+      margin-top: 20px;
+    }
+  }
+  &__field,
+  &__time {
+    width: 200px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: $deepblue;
+    color: $white;
+    &::placeholder {
+      color: $lightblue;
+    }
+  }
+  &__field {
+     
+  }
+  &__time {
+    cursor: pointer;
+    width: 210px;
+    height: 32px;
+    padding: 5px;
+    color: $lightblue;
+  }
+  &__submit {
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: 206px;
+    padding: 8px;
+    background-color: $blue;
+    border: 2px solid transparent;
+    color: $white;
+    &:hover {
+      background-color: $white;
+      border: 2px solid $blue;
+      color: $blue;
+    }
+  }
+  &__close {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1;
+    color: $white;
+    width: 30px;
+    height: 30px;
+    background-color: $deepblue;
+    border: 2px solid $darkblue;
+    &:hover {
+      color: $darkblue;
+      background-color: $white;
+    }
+  }
+  &_opened {
+    display: block
+  }
+}
