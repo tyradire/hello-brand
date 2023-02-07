@@ -1,20 +1,19 @@
-document.addEventListener('DOMContentLoaded', function() {
-  const form = document.getElementById('reserve-form');
 
-  async function sendForm(e) {
-    e.preventDefault();
-    let formData = new FormData(form);
-    let response = await fetch('send.php', {
-      method: 'POST',
-      body: formData
-    })
-    if (response.ok) {
-      formPreview.innerHTML = '',
-      form.reset();
-    } else {
-      alert('Ошибка');
-    }
-  }
+$(document).ready(function() {
 
-  form.addEventListener('submit', sendForm);
+	$("#reserve-form").submit(function( event ) {
+		event.preventDefault();
+		$.ajax({
+			url: "./send.php",
+			method: "post",
+			dataType: 'html',
+			data: $(this).serialize()
+		}).done(function() {
+			$(this).find("input").val("");
+			alert("Спасибо за заявку! Скоро мы с вами свяжемся.");
+			$("#reserve-form").trigger("reset");
+		});
+		return false;
+	});
+		
 });

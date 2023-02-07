@@ -10,7 +10,6 @@ const autoprefixer = require('gulp-autoprefixer');
 const sync = require('browser-sync').create();
 const gulp = require('gulp');
 const ghPages = require('gulp-gh-pages');
-
 const sass = sassGulp(sassSass);
 
 function html() {
