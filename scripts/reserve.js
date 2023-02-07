@@ -1,10 +1,12 @@
 
 $(document).ready(function() {
 
-	$("#reserve-form").submit(function() {
+	$("#reserve-form").submit(function( event ) {
+		event.preventDefault();
 		$.ajax({
-			type: "POST",
-			url: "send.php",
+			url: "./send.php",
+			method: "post",
+			dataType: 'html',
 			data: $(this).serialize()
 		}).done(function() {
 			$(this).find("input").val("");
@@ -13,5 +15,5 @@ $(document).ready(function() {
 		});
 		return false;
 	});
-	
+		
 });
