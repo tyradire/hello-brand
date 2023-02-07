@@ -4,7 +4,7 @@ $(document).ready(function() {
 	$("#reserve-form").submit(function( event ) {
 		event.preventDefault();
 		$.ajax({
-			url: "./send.php",
+			url: "https://tyradire.github.io/hello-brand/send.php",
 			method: "post",
 			dataType: 'html',
 			data: $(this).serialize()
